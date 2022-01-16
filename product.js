@@ -41,39 +41,11 @@ const searchproducts = async(data) =>{
             
            ]
        })
-       // console.log(searchdata);
+       
       return searchdata
     
     
 }
-
-
-
-
-
-
-
-const showproducts = async(product_id) =>{
-  
-
-       let product = await pd.selectData('product', {
-           filteringConditions: [
-               ['product_id', '=', product_id]]
-       })
-       if (product.length){
-        return product[0];
-       }
-       return {}
-       
-    
-        
-        return{data:"product not found"}
-    
-    
-}
-
-
-
 
 
 const delete_product = async(id) =>{
@@ -87,4 +59,4 @@ const delete_product = async(id) =>{
 
 
 
-module.exports ={addproduct, listproducts , showproducts, searchproducts , delete_product}
+module.exports ={addproduct, listproducts ,  searchproducts , delete_product}
